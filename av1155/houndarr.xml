@@ -10,7 +10,7 @@
     <Shell>bash</Shell>
     <GitHub>https://github.com/av1155/houndarr</GitHub>
     <ReadMe>https://av1155.github.io/houndarr</ReadMe>
-    <Support>https://github.com/av1155/houndarr/issues</Support>
+    <Support>https://forums.unraid.net/topic/197870-support-houndarr/</Support>
     <Project>https://github.com/av1155/houndarr</Project>
     <Overview>Houndarr is a self-hosted companion for Radarr, Sonarr, Lidarr, Readarr, and Whisparr that automatically searches for missing and cutoff-unmet media in small, rate-limited batches. It sends search commands to your *arr instances on a schedule so you don't have to manually hit "Search All Missing" and risk flooding your indexers.[br][br]Houndarr does not download anything, manage indexers, or touch your files. It is a search scheduler and nothing more.[br][br][b]Features:[/b][br]- Independent missing and cutoff search passes per instance[br]- Configurable batch size, sleep interval, hourly cap, and per-item cooldown[br]- Queue backpressure (skips cycles when download queue is full)[br]- API keys encrypted at rest[br]- Zero telemetry — only connects to your own *arr instances</Overview>
     <WebUI>http://[IP]:[PORT:8877]</WebUI>
