@@ -2,7 +2,7 @@
 
 unRAID Community Applications template for [Houndarr](https://github.com/av1155/houndarr).
 
-Houndarr is a self-hosted companion for Radarr, Sonarr, Lidarr, Readarr, and Whisparr that automatically searches for missing, cutoff-unmet, and upgrade-eligible media in small, rate-limited batches.
+Houndarr is a self-hosted companion for Radarr, Sonarr, Lidarr, Readarr, and Whisparr that schedules missing, cutoff-unmet, and optional upgrade searches in small, rate-limited batches. It triggers searches through your *arr apps but does not download media, manage indexers, or modify files.
 
 ## Installation
 
