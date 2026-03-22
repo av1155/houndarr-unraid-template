@@ -12,18 +12,19 @@
     <ReadMe>https://av1155.github.io/houndarr</ReadMe>
     <Support>https://forums.unraid.net/topic/197870-support-houndarr/</Support>
     <Project>https://github.com/av1155/houndarr</Project>
-    <Overview>Houndarr is a self-hosted companion for Radarr, Sonarr, Lidarr, Readarr, and Whisparr that automatically searches for missing, cutoff-unmet, and upgrade-eligible media in small, rate-limited batches. It sends search commands to your *arr instances on a schedule so you do not have to manually trigger broad searches and risk flooding your indexers.[br][br]Houndarr does not download anything, manage indexers, or touch your files. It is a focused search scheduler.[br][br][b]Features:[/b][br]- Independent missing and cutoff-unmet search passes per instance[br]- Optional upgrade pass to re-search items that already meet cutoff[br]- Configurable batch size, sleep interval, hourly cap, and per-item cooldown[br]- Queue backpressure (skips cycles when download queue is full)[br]- Built-in and proxy auth modes with trusted-proxy support[br]- API keys encrypted at rest[br]- Zero telemetry; only connects to your own *arr instances</Overview>
+    <Overview>Houndarr is a self-hosted companion for Radarr, Sonarr, Lidarr, Readarr, and Whisparr that schedules missing, cutoff-unmet, and optional upgrade searches in small, rate-limited batches. It triggers searches through your *arr apps but does not download media, manage indexers, or modify files.</Overview>
     <WebUI>http://[IP]:[PORT:8877]</WebUI>
     <TemplateURL>https://raw.githubusercontent.com/av1155/houndarr-unraid-template/main/av1155/houndarr.xml</TemplateURL>
     <Icon>https://raw.githubusercontent.com/av1155/houndarr/main/src/houndarr/static/img/houndarr-logo-dark.png</Icon>
     <Date>2026-03-21</Date>
-    <Changes>https://github.com/av1155/houndarr/blob/main/CHANGELOG.md</Changes>
+    <Changes>Initial Community Applications release for Houndarr.
+Current upstream release: 1.6.1.</Changes>
 
     <Config Name="Web UI Port" Target="8877" Default="8877" Mode="tcp" Description="Port for the Houndarr web interface." Type="Port" Display="always" Required="true" Mask="false"/>
 
     <Config Name="Data Directory" Target="/data" Default="/mnt/user/appdata/houndarr" Mode="rw" Description="Persistent storage for the SQLite database and master key. Back this up." Type="Path" Display="always" Required="true" Mask="false"/>
 
-    <Config Name="Timezone" Target="TZ" Default="America/New_York" Description="Container timezone (e.g. America/New_York, Europe/London)." Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="Timezone" Target="TZ" Default="UTC" Description="Container timezone (e.g. America/New_York, Europe/London)." Type="Variable" Display="always" Required="false" Mask="false"/>
     <Config Name="PUID" Target="PUID" Default="99" Description="User ID for file ownership inside the container." Type="Variable" Display="advanced" Required="false" Mask="false"/>
     <Config Name="PGID" Target="PGID" Default="100" Description="Group ID for file ownership inside the container." Type="Variable" Display="advanced" Required="false" Mask="false"/>
 
