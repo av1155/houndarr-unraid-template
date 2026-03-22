@@ -2,7 +2,7 @@
 <Container version="2">
     <Name>houndarr</Name>
     <Beta>false</Beta>
-    <Category>MediaApp:Other</Category>
+    <Category>MediaApp:Video MediaApp:Music MediaApp:Books Tools:Utilities</Category>
     <Repository>ghcr.io/av1155/houndarr:latest</Repository>
     <Registry>https://github.com/av1155/houndarr/pkgs/container/houndarr</Registry>
     <Network>bridge</Network>
