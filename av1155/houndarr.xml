@@ -16,9 +16,16 @@
     <WebUI>http://[IP]:[PORT:8877]</WebUI>
     <TemplateURL>https://raw.githubusercontent.com/av1155/houndarr-unraid-template/main/av1155/houndarr.xml</TemplateURL>
     <Icon>https://raw.githubusercontent.com/av1155/houndarr/main/src/houndarr/static/img/houndarr-logo-dark.png</Icon>
-    <Date>2026-03-21</Date>
-    <Changes>Initial Community Applications release for Houndarr.
-Current upstream release: 1.6.1.</Changes>
+    <Date>2026-04-28</Date>
+    <Changes>### 2026-04-28
+- Refresh template metadata; current Houndarr release is 1.10.0.
+- The `:latest` image tag pulls each upstream release on container update, so this template covers every Houndarr version without changes.
+
+### 2026-03-30
+- Houndarr accepted into the Community Applications store.
+
+### 2026-03-21
+- Initial template publication.</Changes>
 
     <Config Name="Web UI Port" Target="8877" Default="8877" Mode="tcp" Description="Port for the Houndarr web interface." Type="Port" Display="always" Required="true" Mask="false"/>
 
