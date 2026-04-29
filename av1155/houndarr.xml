@@ -16,8 +16,11 @@
     <WebUI>http://[IP]:[PORT:8877]</WebUI>
     <TemplateURL>https://raw.githubusercontent.com/av1155/houndarr-unraid-template/main/av1155/houndarr.xml</TemplateURL>
     <Icon>https://raw.githubusercontent.com/av1155/houndarr/main/src/houndarr/static/img/houndarr-logo-dark.png</Icon>
-    <Date>2026-04-28</Date>
-    <Changes>### 2026-04-28
+    <Date>2026-04-29</Date>
+    <Changes>### 2026-04-29
+- Houndarr 1.11.0 ships a configurable search log retention threshold; new `Log Retention Days` field exposes `HOUNDARR_LOG_RETENTION_DAYS` (default 30; lower for tight storage, set to 0 to disable automatic purges). Existing installs keep the 30-day default without action.
+
+### 2026-04-28
 - Refresh template metadata; current Houndarr release is 1.10.0.
 - The `:latest` image tag pulls each upstream release on container update, so this template covers every Houndarr version without changes.
 
@@ -39,4 +42,5 @@
     <Config Name="Trusted Proxies" Target="HOUNDARR_TRUSTED_PROXIES" Default="" Description="Comma-separated list of trusted reverse-proxy IPs or CIDR subnets for X-Forwarded-For (e.g. 172.18.0.0/16). Required for accurate rate limiting behind a proxy." Type="Variable" Display="advanced" Required="false" Mask="false"/>
     <Config Name="Auth Mode" Target="HOUNDARR_AUTH_MODE" Default="builtin" Description="Authentication mode: builtin (default) or proxy (delegate auth to reverse proxy/SSO)." Type="Variable" Display="advanced" Required="false" Mask="false"/>
     <Config Name="Auth Proxy Header" Target="HOUNDARR_AUTH_PROXY_HEADER" Default="" Description="Username header from reverse proxy in proxy mode (for example Remote-User). Required when Auth Mode is proxy." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+    <Config Name="Log Retention Days" Target="HOUNDARR_LOG_RETENTION_DAYS" Default="30" Description="Days of search log rows Houndarr keeps before the daily retention sweep deletes older entries. 0 disables automatic purges; 7 to 365 overrides the default. Lower this if the dashboard feels slow on a long-running instance." Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
